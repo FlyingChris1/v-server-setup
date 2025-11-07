@@ -1,55 +1,65 @@
-## v-server-setup
+# v-server-setup
 
-# Description
+In this project, a secured virtual server was set up with SSH key authentication, and the NGINX web server was installed to display a customized HTML start page. Additionally, Git was configured and connected to GitHub via SSH for secure repository management.
 
-In diesem Projekt wurde ein V-Server eingerichtet und abgesichert.
-Ein SSH-Key-Pair wurde lokal erstellt und der Public Key auf dem Server hinterlegt. Der Passwort-Login wurde deaktiviert, sodass der Zugriff nur noch per SSH-Key möglich ist.
-
-Der Webserver NGINX wurde installiert, konfiguriert und zeigt eine angepasste HTML-Startseite an.
-
-Git wurde mit Benutzername und E-Mail eingerichtet. Zusätzlich wurde ein SSH-Key auf dem Server erstellt und in GitHub hinterlegt, um Repositories per SSH nutzen zu können.
-
-# Table of Contents
+## Table of Contents
 
 - [Prerequisites](#prerequisites)
 - [Quickstart](#Quickstart)
 - [Usage](#Usage)
 
-# Prerequisites
+## Prerequisites
 
 - Ready to use VM
-- SSH public & private key
 - Git SSH connection
 
 
-# Quickstart
+## Quickstart
 
-- clone the repository by using "git clone git@github.com:FlyingChris1/v-server-setup.git"
+- clone the repository: 
 
-- Update and install Nginx with "sudo apt update && sudo apt install -y nginx"
+```bash
+git clone git@github.com:FlyingChris1/v-server-setup.git
+cd v-server-setup
+```
 
+- Login to your machine
+```bash
+ssh <your_username>@<your_ip>
+```
 
-# Usage
+- Update & install Nginx
+```bash
+sudo apt update && sudo apt install -y nginx
+```
 
-### Generate a ssh key pair
+## Usage
 
+- Generate a ssh key pair
+```bash
 ssh-keygen -t ed22519
+```
 
-### SSH alias
+- SSH alias
+```bash
+alias <aliasName>="ssh -i ~/.ssh/<your_key> <username>@<your_ip>"
+```
 
-alias (aliasName)="ssh -i ~/.ssh/localkey (UserName)@(IP)"
-
-### Disable password Login
-
+- Disable password Login
+```bash
 sudo nano /etc/ssh/ssh_config
+```
 
-### Create html document for Webserver
-
+- Create html document for Webserver
+```bash
 sudo touch /var/www/alternatives/alternate-index.html
+```
 
-### Create directory
-
+- Create directory
+```bash
 mkdir /var/www/alternatives
+```
+
 
 
 
