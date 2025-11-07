@@ -1,4 +1,4 @@
-# v-server-setup
+# V-server Setup
 
 In this project, a secured virtual server was set up with SSH key authentication, and the NGINX web server was installed to display a customized HTML start page. Additionally, Git was configured and connected to GitHub via SSH for secure repository management.
 
@@ -13,10 +13,9 @@ In this project, a secured virtual server was set up with SSH key authentication
 - Ready to use VM
 - Git SSH connection
 
-
 ## Quickstart
 
-- clone the repository: 
+- Clone the repository: 
 
 ```bash
 git clone git@github.com:FlyingChris1/v-server-setup.git
@@ -59,12 +58,3 @@ sudo touch /var/www/alternatives/alternate-index.html
 ```bash
 mkdir /var/www/alternatives
 ```
-
-
-
-
-
-
-
-
-
